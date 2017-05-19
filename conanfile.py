@@ -28,13 +28,13 @@ conan_basic_setup()''')
 
     def package(self):
         self.copy("*.h", dst="include", src="glfw/include")
-        self.copy("*glfw.lib", dst="lib", keep_path=False)
+        self.copy("*glfw3.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["glfw"]
+        self.cpp_info.libs = ["glfw3"]
         if self.settings.os == "Macos":
             self.cpp_info.exelinkflags.append("-framework CoreFoundation")
             self.cpp_info.exelinkflags.append("-framework CoreGraphics")

@@ -1,4 +1,5 @@
 test_package/build/
 test_package/conanfile.pyc
+__pycache__/
 tags
 

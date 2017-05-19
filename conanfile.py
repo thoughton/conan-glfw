@@ -38,7 +38,9 @@ conan_basic_setup()''')
         if self.settings.os == "Macos":
             self.cpp_info.exelinkflags.append("-framework CoreFoundation")
             self.cpp_info.exelinkflags.append("-framework CoreGraphics")
+            self.cpp_info.exelinkflags.append("-framework CoreVideo")
             self.cpp_info.exelinkflags.append("-framework Cocoa")
             self.cpp_info.exelinkflags.append("-framework OpenGL")
+            self.cpp_info.exelinkflags.append("-framework IOKit")
         self.cpp_info.sharedlinkflags = self.cpp_info.exelinkflags
 

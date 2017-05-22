@@ -42,5 +42,13 @@ conan_basic_setup()''')
             self.cpp_info.exelinkflags.append("-framework Cocoa")
             self.cpp_info.exelinkflags.append("-framework OpenGL")
             self.cpp_info.exelinkflags.append("-framework IOKit")
+        elif self.settings.os == "Linux":
+            self.cpp_info.libs.append("dl")
+            self.cpp_info.libs.append("X11")
+            self.cpp_info.libs.append("Xrandr")
+            self.cpp_info.libs.append("Xi")
+            self.cpp_info.libs.append("Xcursor")
+            self.cpp_info.libs.append("Xinerama")
+            self.cpp_info.libs.append("pthread")
         self.cpp_info.sharedlinkflags = self.cpp_info.exelinkflags
 
